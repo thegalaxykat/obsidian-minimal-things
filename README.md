@@ -6,6 +6,8 @@ of [Things Theme](https://github.com/colineckert/obsidian-things) by [Colin E
 ## Screenshots
 ![](assets/main-demo.png)
 
+![](assets/note_example.png)
+
 ## Features
 
 - Things-inspired color palette while staying true to minimal default obsidian
