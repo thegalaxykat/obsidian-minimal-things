@@ -1,10 +1,9 @@
 # Minimal Things
 
-### Notes on V1 and V2 of this theme
-
 This theme is a fork
 of [Things Theme](https://github.com/colineckert/obsidian-things) by [Colin Eckert](https://github.com/colineckert).
 
+## Screenshots
 ![](assets/main-demo.png)
 
 ## Features
