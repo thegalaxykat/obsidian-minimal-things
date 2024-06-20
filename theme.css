@@ -205,7 +205,7 @@ body.theme-light.is-mobile {
   --atom-gray-2: #383a42;
   --atom-red: #e75545;
   --atom-green: #4ea24c;
-  --atom-blue: #3d74f6;
+  --atom-blue: #3d7ef6;
   --atom-purple: #a625a4;
   --atom-aqua: #0084bc;
   --atom-yellow: #e35649;
@@ -231,7 +231,7 @@ body.theme-dark.is-mobile {
   --color-purple: #a483f0;
   --color-pink: #f18ec3;
   --color-super-bold: #ffffffe0;
-  --color-highlight: #d56bb9;
+  --color-highlight: #d188be;
   /* --color-highlight: #79A9EC; */
   --color-base-00: #1c2127; /* main editor window */
   --color-base-10: #282c34; /* code blocks */
@@ -300,9 +300,9 @@ body.theme-dark.is-mobile {
   --atom-aqua: #e06c7f;
   --atom-purple: #e186dcec;
   --atom-green: #98c379;
-  --atom-blue: #03ace9;
+  --atom-blue: #5bb6e7;
   --atom-orange: #987cdb;
-  --atom-cyan: #61afef;
+  --atom-cyan: #78baf8;
   --atom-yellow: #c89d4d;
 
   /* original colors */
