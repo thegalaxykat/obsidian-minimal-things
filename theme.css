@@ -231,7 +231,8 @@ body.theme-dark.is-mobile {
   --color-purple: #a483f0;
   --color-pink: #f18ec3;
   --color-super-bold: #ffffffe0;
-  --color-highlight: #79A9EC;
+  --color-highlight: #d56bb9;
+  /* --color-highlight: #79A9EC; */
   --color-base-00: #1c2127; /* main editor window */
   --color-base-10: #282c34; /* code blocks */
   --color-base-20: #1f242b; /* top unselected unfocused nav */
@@ -299,7 +300,7 @@ body.theme-dark.is-mobile {
   --atom-aqua: #e06c7f;
   --atom-purple: #e186dcec;
   --atom-green: #98c379;
-  --atom-blue: #5ab8cf;
+  --atom-blue: #03ace9;
   --atom-orange: #987cdb;
   --atom-cyan: #61afef;
   --atom-yellow: #c89d4d;
@@ -564,6 +565,15 @@ body.fancy-code .markdown-reading-view .markdown-preview-view pre code {
 body.fancy-code .markdown-preview-view pre code {
   padding: var(--size-4-1) var(--size-4-5);
 }
+
+/* add border around code blocks */
+.markdown-source-view.mod-cm6 .cm-content .HyperMD-codeblock-begin {
+  border-top: .5em solid var(--background-primary);
+}
+.markdown-source-view.mod-cm6 .cm-content .HyperMD-codeblock-end {
+  border-bottom: .5em solid var(--background-primary);
+}
+
 
 /* ------------------- */
 /* One Dark Syntax Coloring */
