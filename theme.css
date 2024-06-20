@@ -2,6 +2,7 @@
 THINGS
 Version 2.1.20
 Created by @colineckert
+Modified by @thegalaxykat
 
 Readme:
 https://github.com/colineckert/obsidian-things
@@ -27,6 +28,7 @@ body {
   --accent-l: 60%; /* Accent lightness Light Mode */
 
   --blue: #2e80f2;
+  --light-blue: #458ef3;
   --pink: #ff82b2;
   --green: #3eb4bf;
   --yellow: #e5b567;
@@ -36,18 +38,18 @@ body {
 
   --h1-color: var(--text-normal);
   --h2-color: var(--text-normal);
-  --h3-color: var(--blue);
-  --h4-color: var(--yellow);
-  --h5-color: var(--red);
-  --h6-color: var(--text-muted);
+  --h3-color: var(--text-normal);
+  --h4-color: var(--text-normal);
+  --h5-color: var(--text-muted);
+  --h6-color: var(--text-normal);
 
   --strong-color: var(--pink);
-  --em-color: var(--pink);
-  --quote-color: var(--green);
+  --em-color: var(--blue);
+  --quote-color: var(--text-muted);
 
   --tag-background-color-l: #bde1d3;
   --tag-font-color-l: #1d694b;
-  --tag-background-color-d: #1d694b;
+  --tag-background-color-d: #2c72e983;
   --tag-font-color-d: #ffffff;
 
   --highlight-background-color--normal: hsl(50deg 100% 50% / 15%) !important;
@@ -74,13 +76,13 @@ body {
 
   --h1-size: 1.7rem;
   --h2-size: 1.5rem;
-  --h3-size: 1.2rem;
-  --h4-size: 1.1rem;
-  --h5-size: 1rem;
-  --h6-size: 0.9rem;
+  --h3-size: 1.4rem;
+  --h4-size: 1.2rem;
+  --h5-size: 1.1rem;
+  --h6-size: 1rem;
 
   /* Misc */
-  --checkbox-radius: 30%;
+  --checkbox-radius: 25%;
   --link-external-decoration: underline;
   --link-decoration: underline;
 
@@ -100,6 +102,16 @@ body {
 
   --line-width-adaptive: var(--line-width);
   --line-width-wide: calc(var(--line-width) + 12.5%);
+
+  --h1-line-height: calc(0.8 * var(--line-height));
+  --h2-line-height: calc(0.85 * var(--line-height));
+  --h3-line-height: calc(0.9 * var(--line-height));
+  --h4-line-height: var(--line-height);
+  --h5-line-height: var(--line-height);
+  --h6-line-height: var(--line-height);
+
+  --h5-variant: all-small-caps;
+  --h6-variant: bold;
 }
 
 /* COLOR SCHEMES
@@ -214,11 +226,15 @@ body.theme-dark.is-mobile {
   --color-yellow: #e0de71;
   --color-cyan: #53dfdd;
   --color-blue: #027aff;
-  --color-purple: #a882ff;
-  --color-pink: #fa99cd;
+  /* --color-purple: #a882ff;
+  --color-pink: #fa99cd; */
+  --color-purple: #a483f0;
+  --color-pink: #f18ec3;
+  --color-super-bold: #ffffffe0;
+  --color-highlight: #f1a5d3;
   --color-base-00: #1c2127; /* main editor window */
   --color-base-10: #282c34; /* code blocks */
-  --color-base-20: #181c20; /* top unselected unfocused nav */
+  --color-base-20: #1f242b; /* top unselected unfocused nav */
   --color-base-25: #2c313c;
   --color-base-30: #35393e;
   --color-base-35: #3f3f3f;
@@ -301,14 +317,6 @@ body.is-mobile.theme-dark.mobile-black-background {
   }
 }
 
-/* H2 styling */
-body.h2-underline h2,
-body.h2-underline .HyperMD-header.HyperMD-header-2.cm-line {
-  border-bottom: 2px solid var(--background-modifier-border);
-  width: 100%;
-  padding-bottom: 2px;
-}
-
 /* Hashtags font */
 .markdown-source-view.mod-cm6.is-live-preview .cm-hashtag.cm-meta,
 .markdown-source-view.mod-cm5 .cm-hashtag.cm-meta {
@@ -325,13 +333,28 @@ body:not(.default-font-color) span.cm-quote.cm-quote-1 {
 /* Bold font */
 body:not(.default-font-color) strong,
 body:not(.default-font-color) span:not(.cm-highlight).cm-strong {
-  color: var(--strong-color);
+  color: var(--text-normal);
 }
 
 /* Italics */
 body:not(.default-font-color) em,
 body:not(.default-font-color) span:not(.cm-highlight).cm-em {
-  color: var(--em-color);
+  color: var(--text-normal);
+}
+
+/* Bold Italics */
+body:not(.default-font-color) span.cm-strong.cm-em {
+  font-weight: bold;
+  color: var(--color-super-bold);
+  font-style: normal;
+}
+
+/* Highlight */
+.cm-s-obsidian span.cm-formatting-highlight, 
+.cm-s-obsidian span.cm-highlight, 
+.markdown-preview-view mark {
+  background-color: transparent;
+  color: var(--color-highlight);
 }
 
 /* Styled highlights */
@@ -368,18 +391,38 @@ body.fancy-highlight span.search-result-file-matched-text {
 .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task='x'],
 .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task='X'],
 .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task='M'] {
-  text-decoration: none;
+  text-decoration: line-through;
   color: var(--text-faint);
 }
 
 /* Image card */
 img {
-  border-radius: 4px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  border-radius: 1px;
+  display: block !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.markdown-source-view.mod-cm6 .cm-content > * {
+  margin: auto auto !important;
 }
 
 .theme-dark .modal-container .suggestion-item.is-selected {
   background: var(--color-accent);
+}
+
+.HyperMD-header-1::after, h1 {
+  display: block;
+  content: "";
+  padding-bottom: 2px;  
+  border-bottom: 2px solid var(--color-base-25);
+}
+
+.HyperMD-header-2::after, h2 {
+  display: block;
+  content: "";
+  padding-bottom: 2px;  
+  border-bottom: 1px solid var(--color-base-25);
 }
 
 /* Focus active line */

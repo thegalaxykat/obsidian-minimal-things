@@ -2,6 +2,7 @@
 THINGS
 Version 1.8.2
 Created by @colineckert
+Modified by @thegalaxykat
 
 Readme:
 https://github.com/colineckert/obsidian-things
@@ -81,14 +82,14 @@ For help and/or CSS snippets, thanks to:
   /* Colors, sizes, weights, padding */
 
   --h1-color: var(--text-normal);
-  --h2-color: var(--blue);
-  --h3-color: var(--blue);
-  --h4-color: var(--yellow);
-  --h5-color: var(--red);
-  --h6-color: var(--text-muted);
+  --h2-color: var(--text-normal);
+  --h3-color: var(--text-normal);
+  --h4-color: var(--text-normal);
+  --h5-color: var(--text-normal);
+  --h6-color: var(--text-normal);
 
   --strong-color: var(--pink);
-  --em-color: var(--pink);
+  --em-color: var(--blue);
 
   --font-normal: 16px;
   --font-small: 13px;
@@ -6575,8 +6576,8 @@ community:
 /* Style Settings */
 
 /* @settings
-name: Things Theme
-id: things-style
+name: Minimal Things Theme
+id: minimal-things-style
 settings:
     -
         id: features
